@@ -1,6 +1,8 @@
 from flask import jsonify, request
-from app.services.instrument_service import InstrumentService
+
 from app.models.models import Instrument
+from app.services.instrument_service import InstrumentService
+
 
 class InstrumentController:
     def __init__(self, instrument_service: InstrumentService):

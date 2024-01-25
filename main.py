@@ -1,6 +1,6 @@
+import os
 from flask import Flask
-
-from app import db
+from app.models.models import seed_all_data
 from app.controllers.instrument_controller import InstrumentController
 from app.repositories.instrument_repository import InstrumentRepository
 from app.services.instrument_service import InstrumentService
@@ -13,8 +13,6 @@ instrument_repository = InstrumentRepository()
 instrument_service = InstrumentService(instrument_repository)
 instrument_controller = InstrumentController(instrument_service)
 
-# db = SQLAlchemy(app)
-db.init_app(app)
 
 # # Define routes
 # /instruments
@@ -27,5 +25,10 @@ app.add_url_rule('/instruments/<int:instrument_id>', 'update_instrument', instru
 app.add_url_rule('/instruments/<int:instrument_id>', 'delete_instrument', instrument_controller.delete_instrument,
                  methods=['DELETE'])
 
+def is_first_run():
+    return not os.path.exists("initialized.flag")
+
 if __name__ == '__main__':
+    if is_first_run():
+        seed_all_data()
     app.run(debug=True)

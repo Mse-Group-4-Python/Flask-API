@@ -20,6 +20,11 @@ class Base(DeclarativeBase):
 
 
 class Category(Base):
+    
+    def __init__(self, id, category_name):
+        self.category_name = category_name
+        self.id = id
+    
     __tablename__ = "category"
     id = Column(Integer, primary_key=True)
     category_name = Column(String(255), nullable=False)
@@ -29,6 +34,12 @@ class Category(Base):
 
 
 class Manufacturer(Base):
+    
+    def __init__(self, id, manufacturer_name):
+        super().__init__()
+        self.id = id
+        self.manufacturer_name = manufacturer_name
+    
     __tablename__ = "manufacturer"
     id = Column(Integer, primary_key=True, autoincrement=True)
     manufacturer_name = Column(String(255), nullable=False)
@@ -146,3 +157,16 @@ db_session = sessionmaker(bind=engine)()
 mapper_registry = registry(metadata=metadata)
 mapper_registry.configure()
 # Path: entities/db_context.py
+
+
+def seed_all_data():
+    category_1 = Category(id=1, category_name="Guitar")
+    category_2 = Category(id=2, category_name="Drums")
+    db_session.add_all([category_1, category_2])
+    db_session.commit()
+    manufacturer_1 = Manufacturer(id=1, manufacturer_name="Yamaha")
+    manufacturer_2 = Manufacturer(id=2, manufacturer_name="Kawai")
+    db_session.add_all([manufacturer_1, manufacturer_2])
+    db_session.commit()
+    with open("initialized.flag", "w") as flag_file:
+        flag_file.write("initialized")

@@ -6,8 +6,8 @@ from app.services.category_service import CategoryService
 class CategoryController:
     __category_service: CategoryService
 
-    def __init__(self, category_service: CategoryService = None):
-        self.__category_service = category_service or CategoryService()
+    def __init__(self, _category_service: CategoryService = None):
+        self.__category_service = _category_service
 
     def get_all(self):
         try:

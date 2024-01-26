@@ -37,9 +37,6 @@ app.add_url_rule('/instruments/<int:instrument_id>', 'delete_instrument', instru
 app.add_url_rule('/categories', 'get_all_categories', category_controller.get_all, methods=['GET'])
 app.add_url_rule('/categories/<int:category_id>', 'get_category_by_id', category_controller.get_by_id,
                  methods=['GET'])
-app.add_url_rule('/categories', 'create_category', category_controller.create, methods=['POST'])
-app.add_url_rule('/categories/<int:category_id>', 'update_category', category_controller.update, methods=['PUT'])
-app.add_url_rule('/categories/<int:category_id>', 'delete_category', category_controller.delete, methods=['DELETE'])
 
 
 def is_first_run():

@@ -25,24 +25,3 @@ class CategoryController:
             return jsonify({'error': 'Category not found'}), 404
         except Exception as e:
             return jsonify({'error': str(e)}), 500
-
-    def create(self, category):
-        try:
-            self.__category_service.create(category)
-            return jsonify({'message': 'Category created successfully'}), 201
-        except Exception as e:
-            return jsonify({'error': str(e)}), 500
-
-    def update(self, category_id, category):
-        try:
-            self.__category_service.update(category_id, category)
-            return jsonify({'message': 'Category updated successfully'}), 200
-        except Exception as e:
-            return jsonify({'error': str(e)}), 500
-
-    def delete(self, category_id):
-        try:
-            self.__category_service.delete(category_id)
-            return jsonify({'message': 'Category deleted successfully'}), 200
-        except Exception as e:
-            return jsonify({'error': str(e)}), 500

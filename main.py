@@ -1,16 +1,22 @@
 import os
 
 from flask import Flask
+from flask_cors import CORS
 
 from app.controllers.category_controller import CategoryController
 from app.controllers.instrument_controller import InstrumentController
+from app.controllers.instrument_item_controller import InstrumentItemController
 from app.models.models import seed_all_data
 from app.repositories.category_repository import CategoryRepository
 from app.repositories.instrument_repository import InstrumentRepository
+from app.repositories.instrument_item_repository import InstrumentItemRepository
 from app.services.category_service import CategoryService
 from app.services.instrument_service import InstrumentService
+from app.services.instrument_item_service import InstrumentItemService
 
 app = Flask(__name__)
+CORS(app)
+
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///instruments.sqlite.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -21,6 +27,10 @@ instrument_controller = InstrumentController(instrument_service)
 category_repository = CategoryRepository()
 category_service = CategoryService(category_repository)
 category_controller = CategoryController(category_service)
+
+instrument_item_repository = InstrumentItemRepository()
+instrument_item_service = InstrumentItemService(instrument_item_repository)
+instrument_item_controller = InstrumentItemController(instrument_item_service)
 
 # # Define routes
 # /instruments
@@ -38,6 +48,13 @@ app.add_url_rule('/categories', 'get_all_categories', category_controller.get_al
 app.add_url_rule('/categories/<int:category_id>', 'get_category_by_id', category_controller.get_by_id,
                  methods=['GET'])
 
+# /instrument_item
+app.add_url_rule('/instrument-items', 'get_instrument_items', instrument_item_controller.get_all_instrument_item,
+                 methods=['GET'])
+app.add_url_rule('/instrument-items/<int:instrument_item_id>', 'get_instrument_item_by_id',
+                 instrument_item_controller.get_instrument_item_by_id, methods=['GET'])
+app.add_url_rule('/instrument-items', 'create_instrument_item', instrument_item_controller.create_instrument_item,
+                 methods=['POST'])
 
 def is_first_run():
     return not os.path.exists("initialized.flag")

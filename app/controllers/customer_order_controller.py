@@ -12,7 +12,8 @@ class CustomerOrderController:
         self.__customer_order_service = _customer_order_service
 
     def get_all_customer_order(self):
-        return self.__customer_order_service.get_all_customer_order()
+        customer_order_list = self.__customer_order_service.get_all_customer_order()
+        return jsonify([customer_order.serialize() for customer_order in customer_order_list])
 
     def create_customer_order(self):
         try:

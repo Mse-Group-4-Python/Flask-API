@@ -15,7 +15,9 @@ class CustomerOrderService:
         self.__instrument_item_repository = _instrument_item_repository
 
     def get_all_customer_order(self) -> list[CustomerOrderModel]:
-        return [CustomerOrderModel(entity.id, entity.customer_id, entity.order_date, entity.order_status) for entity in
+        return [CustomerOrderModel(id=entity.id, customer_name=entity.customer_name, order_time=entity.order_time,
+                                   delivery_address=entity.delivery_address, phone_number=entity.phone_number,
+                                   total_price=entity.total_price) for entity in
                 self.__customer_order_repository.get_all()]
 
     def create_customer_order(self, data):

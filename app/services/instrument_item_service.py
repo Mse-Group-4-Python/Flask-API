@@ -7,8 +7,10 @@ class InstrumentItemService:
         self.instrument_item_repository = instrument_item_repository
 
     def get_all_instrument_item(self) -> [InstrumentItemModel]:
-        return [InstrumentItemModel(entity.id, entity.instrument_id, entity.serial_number, entity.year_of_purchase,
-                                    entity.description, entity.price) for entity in
+        return [InstrumentItemModel(instrument_item_id=entity.id, instrument_id=entity.instrument_id,
+                                    serial_number=entity.serial_number, year_of_purchase=entity.year_of_purchase,
+                                    description=entity.description, price=entity.price,
+                                    instrument_name=entity.instrument.instrument_name) for entity in
                 self.instrument_item_repository.get_all()]
 
     def get_instrument_item_by_id(self, instrument_item_id):

@@ -8,17 +8,18 @@ from app.controllers.instrument_controller import InstrumentController
 from app.controllers.instrument_item_controller import InstrumentItemController
 from app.models.models import seed_all_data
 from app.repositories.category_repository import CategoryRepository
-from app.repositories.instrument_repository import InstrumentRepository
 from app.repositories.instrument_item_repository import InstrumentItemRepository
+from app.repositories.instrument_repository import InstrumentRepository
 from app.services.category_service import CategoryService
-from app.services.instrument_service import InstrumentService
 from app.services.instrument_item_service import InstrumentItemService
+from app.services.instrument_service import InstrumentService
 
 app = Flask(__name__)
 CORS(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///instruments.sqlite.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.json.sort_keys = False
 
 instrument_repository = InstrumentRepository()
 instrument_service = InstrumentService(instrument_repository)
@@ -55,6 +56,7 @@ app.add_url_rule('/instrument-items/<int:instrument_item_id>', 'get_instrument_i
                  instrument_item_controller.get_instrument_item_by_id, methods=['GET'])
 app.add_url_rule('/instrument-items', 'create_instrument_item', instrument_item_controller.create_instrument_item,
                  methods=['POST'])
+
 
 def is_first_run():
     return not os.path.exists("initialized.flag")

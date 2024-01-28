@@ -188,7 +188,9 @@ def add_instrument():
     instrument_20 = Instrument(id=20, instrument_name="IshWooden", manufacturer_id=11, category_id=1 ,description="A wooden fish, also known as a Chinese temple block, wooden bell, or muyu, is a type of woodblock that originated from East Asia that is used by monks and lay people in the Mahayana tradition of Buddhism.", color="Natural", tags="Idiophones")
     instrument_21 = Instrument(id=21, instrument_name="Bamboohi", manufacturer_id=1, category_id=1 ,description="A bamboula is a type of drum made from a rum barrel with skin stretched over one end.It is also a dance accompanied by music from these drums.", color="Brown", tags="Membranophones")
     
-    db_session.add_all([instrument_1, instrument_2,instrument_3, instrument_4, instrument_5, instrument_6, instrument_7, instrument_8, instrument_9, instrument_10, instrument_11, instrument_12, instrument_13, instrument_14, instrument_15, instrument_16, instrument_17, instrument_18, instrument_19, instrument_20, instrument_21])
+    db_session.add_all([instrument_1, instrument_2,instrument_3, instrument_4, instrument_5, instrument_6, instrument_7,
+                         instrument_8, instrument_9, instrument_10, instrument_11, instrument_12, instrument_13,
+                           instrument_14, instrument_15, instrument_16, instrument_17, instrument_18, instrument_19, instrument_20, instrument_21])
     db_session.commit()
     
 def add_instrucment_item():

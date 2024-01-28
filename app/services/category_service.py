@@ -11,7 +11,8 @@ class CategoryService:
         self.__category_repository = _category_repository
 
     def get_all(self) -> list[CategoryModel]:
-        return [CategoryModel(entity.id, entity.category_name) for entity in self.__category_repository.get_all()]
+        return [CategoryModel(entity.id, entity.category_name) 
+                for entity in self.__category_repository.get_all()]
 
     def get_by_id(self, category_id) -> Optional[CategoryModel]:
         entity = self.__category_repository.get_by_id(category_id)

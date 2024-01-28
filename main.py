@@ -6,16 +6,19 @@ from flask_cors import CORS
 from app.controllers.category_controller import CategoryController
 from app.controllers.customer_order_controller import CustomerOrderController
 from app.controllers.instrument_controller import InstrumentController
+from app.controllers.manufacturer_controller import ManufacturerController
 from app.controllers.instrument_item_controller import InstrumentItemController
 from app.models.models import seed_all_data
 from app.repositories.category_repository import CategoryRepository
 from app.repositories.customer_order_repository import CustomerOrderRepository
 from app.repositories.instrument_item_repository import InstrumentItemRepository
 from app.repositories.instrument_repository import InstrumentRepository
+from app.repositories.manufacturer_repository import ManufacturerRepository
 from app.services.category_service import CategoryService
 from app.services.customer_order_service import CustomerOrderService
 from app.services.instrument_item_service import InstrumentItemService
 from app.services.instrument_service import InstrumentService
+from app.services.manufacturer_service import ManufacturerService
 
 app = Flask(__name__)
 CORS(app)
@@ -32,6 +35,11 @@ category_repository = CategoryRepository()
 category_service = CategoryService(category_repository)
 category_controller = CategoryController(category_service)
 
+
+manufacturer_repository = ManufacturerRepository()
+manufacturer_service = ManufacturerService(manufacturer_repository)
+manufacturer_controller = ManufacturerController(manufacturer_service=manufacturer_service)
+
 instrument_item_repository = InstrumentItemRepository()
 instrument_item_service = InstrumentItemService(instrument_item_repository)
 instrument_item_controller = InstrumentItemController(instrument_item_service)
@@ -39,6 +47,7 @@ instrument_item_controller = InstrumentItemController(instrument_item_service)
 customer_order_repository = CustomerOrderRepository()
 customer_order_service = CustomerOrderService(customer_order_repository, instrument_item_repository)
 customer_order_controller = CustomerOrderController(customer_order_service)
+
 
 # # Define routes
 # /instruments
@@ -74,6 +83,11 @@ app.add_url_rule('/customer-orders', 'get_all_customer_orders', customer_order_c
 app.add_url_rule('/customer-orders', 'create_customer_order', customer_order_controller.create_customer_order, methods=['POST'])
     # add url PUT for update /instrument_item/{instrument_item_id} that will calling controller of instrument item
 
+
+
+# /manufacturer
+app.add_url_rule('/manufacturers', 'get_all_manufacturers', manufacturer_controller.get_all, methods=['GET'])
+app.add_url_rule('/manufacturers/<int:manufacturer_id>', 'get_manufacturer_by_id', manufacturer_controller.get_by_id, methods=['GET'])
 
 
 def is_first_run():

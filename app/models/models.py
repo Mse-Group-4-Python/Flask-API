@@ -166,17 +166,35 @@ def add_manufacturer_data():
     db_session.commit()
 
 def add_instrument():
-    instrument_1 = Instrument(id=1, instrument_name="Lur", manufacturer_id=5, category_id=13 ,description="Aerophones", color="Natural trumpets", tags="Denmark, Norway")
-    db_session.add_all([instrument_1])
+    instrument_1 = Instrument(id=1, instrument_name="Alfaia", manufacturer_id=5, category_id=13 ,description="The alfaia is a Brazilian membranophone. It is a wooden drum made of animal skin tensioned or loosened through ropes placed alongside the body of the instrument.", color="Natural trumpets", tags="Membranophones")
+    instrument_2 = Instrument(id=2, instrument_name="Marimba", manufacturer_id=5, category_id=2 ,description="The marimba (/mərimbə/) is a musical instrument in the percussion family that consists of wooden bars that are struck by mallets", color="Wood", tags="Aerophones")
+    instrument_3 = Instrument(id=3, instrument_name="Kulintang", manufacturer_id=5, category_id=8 ,description="The ashiko is a drum, shaped like a tapered cylinder (or truncated cone) with the head on the wide end, and the narrow end open.", color="Black", tags="Idiophones")
+    instrument_4 = Instrument(id=4, instrument_name="Shekere", manufacturer_id=5, category_id=5 ,description="It is made of hardwood and generally has a calfskin hide. Nowadays, goatskin is sometimes used, in imitation of the high sound of the popular djembe drum.", color="Natural trumpets", tags="Membranophones")
+    instrument_5 = Instrument(id=5, instrument_name="Steelpan", manufacturer_id=5, category_id=7 ,description="The steelpan (also known as a pan, steel drum, and sometimes, collectively with other musicians, as a steelband or steel orchestra) is a musical instrument originating in Trinidad and Tobago. Steelpan musicians are called pannists.", color="Black", tags="Aerophones")
+    instrument_6 = Instrument(id=6, instrument_name="Tambourine", manufacturer_id=5, category_id=3 ,description="The tambourine is a musical instrument in the percussion family consisting of a frame, often of wood or plastic, with pairs of small metal jingles, called 'zills'.", color="Red", tags="Idiophones")
+    instrument_7 = Instrument(id=7, instrument_name="Triangle", manufacturer_id=2, category_id=13 ,description="The triangle is a musical instrument in the percussion family, and is classified as an idiophone in the Hornbostel-Sachs classification system. Triangles are made from a variety of metals including aluminum, beryllium copper, brass, bronze, iron, and steel. ", color="Silver", tags="Idiophones")
+    instrument_8 = Instrument(id=8, instrument_name="Vibraphone", manufacturer_id=2, category_id=4 ,description="Traditionally strapped over the shoulder, alfaias are played with a distinctive technique in which players hold the weak-hand drum stick inverted to get the proper attack on the head. ", color="White", tags="Idiophones")
+    instrument_9 = Instrument(id=9, instrument_name="Vibraslap", manufacturer_id=2, category_id=10 ,description="Vibraslap has a characteristic deep, heavy sound, different from other bass drums such as the surdo or kick-drum", color="Wood", tags="Membranophones")
+    instrument_10 = Instrument(id=10, instrument_name="Wooden fish", manufacturer_id=2, category_id=1 ,description="A wooden fish, also known as a Chinese temple block, wooden bell, or muyu, is a type of woodblock that originated from East Asia that is used by monks and lay people in the Mahayana tradition of Buddhism.", color="Natural", tags="Idiophones")
+    instrument_11 = Instrument(id=11, instrument_name="Bamboula", manufacturer_id=3, category_id=1 ,description="A bamboula is a type of drum made from a rum barrel with skin stretched over one end.It is also a dance accompanied by music from these drums.", color="Brown", tags="Membranophones")
+    db_session.add_all([instrument_1, instrument_2,instrument_3, instrument_4, instrument_5, instrument_6, instrument_7, instrument_8, instrument_9, instrument_10, instrument_11])
     db_session.commit()
     
 def add_instrucment_item():
-    instrument_item_1 = InstrumentItem(id=1, instrument_id=1, serial_number="423.121.22", description="Bronze snare from Brudevelte bog, Lynge parish.", year_of_purchase=2007 ,price=10000000)
-    db_session.add_all([instrument_item_1])
+    instrument_item_1 = InstrumentItem(id=1, instrument_id=1, serial_number="211.211.2", description="Cambodia", year_of_purchase=2007 ,price=10000000)
+    instrument_item_2 = InstrumentItem(id=2, instrument_id=9, serial_number="211.311", description="China", year_of_purchase=2017 ,price=123000000)
+    instrument_item_3 = InstrumentItem(id=3, instrument_id=8, serial_number="211.221.1", description="Greece", year_of_purchase=2019 ,price=34500000)
+    instrument_item_4 = InstrumentItem(id=4, instrument_id=7, serial_number="211.221-7", description="Curdo-persiano", year_of_purchase=2024 ,price=8754300000)
+    instrument_item_5 = InstrumentItem(id=5, instrument_id=6, serial_number="211.221-8", description="Thailand", year_of_purchase=1997 ,price=9865654500000)
+    instrument_item_6 = InstrumentItem(id=6, instrument_id=5, serial_number="111.24", description="India", year_of_purchase=1998 ,price=19750000)
+    instrument_item_7 = InstrumentItem(id=7, instrument_id=4, serial_number="111.212", description="Okinawa", year_of_purchase=2000 ,price=75268800000)
+    instrument_item_8 = InstrumentItem(id=8, instrument_id=3, serial_number="111.242.222", description="Mexico", year_of_purchase=2002 ,price=84268000000)
+    instrument_item_9 = InstrumentItem(id=9, instrument_id=2, serial_number="423.121.22", description="Portugal", year_of_purchase=2004 ,price=468900000)
+    db_session.add_all([instrument_item_1, instrument_item_2, instrument_item_3, instrument_item_4, instrument_item_5, instrument_item_6, instrument_item_7, instrument_item_8, instrument_item_9])
     db_session.commit()
 
 def add_customer_order():
-    customer_order_1 = CustomerOrder(id=1, customer_name="Trang", delivery_address="95 Le Van Sy", phone_number="0392391585",order_time="10:00" ,total_price=1)
+    customer_order_1 = CustomerOrder(id=1, customer_name="Trang", delivery_address="95 Le Van Sy", phone_number="0392391585",order_time="2023,2,3,10,12,1" ,total_price=1)
     db_session.add_all([customer_order_1])
     db_session.commit()
 

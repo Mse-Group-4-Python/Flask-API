@@ -167,14 +167,18 @@ def add_manufacturer_data():
 
 def add_instrument():
     instrument_1 = Instrument(id=1, instrument_name="Lur", manufacturer_id=5, category_id=13 ,description="Aerophones", color="Natural trumpets", tags="Denmark, Norway")
-
+    db_session.add_all([instrument_1])
+    db_session.commit()
+    
 def add_instrucment_item():
     instrument_item_1 = InstrumentItem(id=1, instrument_id=1, serial_number="423.121.22", description="Bronze snare from Brudevelte bog, Lynge parish.", year_of_purchase=2007 ,price=10000000)
-  
+    db_session.add_all([instrument_item_1])
+    db_session.commit()
 
 def add_customer_order():
     customer_order_1 = CustomerOrder(id=1, customer_name="Trang", delivery_address="95 Le Van Sy", phone_number="0392391585",order_time="10:00" ,total_price=1)
-
+    db_session.add_all([customer_order_1])
+    db_session.commit()
 
 def seed_all_data():
     add_category_data()

@@ -26,5 +26,5 @@ class InstrumentRepository:
         db_session.commit()
 
     def delete(self, instrument):
-        db_session.delete(instrument)
+        db_session.query(Instrument).filter_by(id=instrument.id[0]).delete()
         db_session.commit()

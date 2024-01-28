@@ -56,6 +56,12 @@ app.add_url_rule('/instrument-items/<int:instrument_item_id>', 'get_instrument_i
                  instrument_item_controller.get_instrument_item_by_id, methods=['GET'])
 app.add_url_rule('/instrument-items', 'create_instrument_item', instrument_item_controller.create_instrument_item,
                  methods=['POST'])
+    # add url PUT for update /instrument_item/{instrument_item_id} that will calling controller of instrument item
+app.add_url_rule('/instrument-items/<int:instrument_item_id>', 'update_instrument_item', instrument_item_controller.update_instrument_item,
+                 methods=['PUT'])
+    # add url POST for delete /instrument_item/{instrument_item_id} that will calling controller of instrument item
+app.add_url_rule('/instrument-items/<int:instrument_item_id>', 'delete_instrument_item', instrument_item_controller.delete_instrument_item,
+                 methods=['DELETE'])
 
 
 def is_first_run():

@@ -1,4 +1,4 @@
-from app.models.models import InstrumentItem
+from app.models.models import InstrumentItem, db_session
 from app.services.instrument_item_service import InstrumentItemService
 from flask import jsonify, request
 
@@ -32,3 +32,27 @@ class InstrumentItemController:
             return jsonify({'message': 'Instrument Item created successfully'}), 200
         except Exception as e:
             return jsonify({'error': str(e)}), 500
+        
+
+    # indicate function update instrument item   
+    def update_instrument_item(self,instrument_item_id):
+        try:
+            data =request.json
+            instrument_item = InstrumentItem(**data)
+            if instrument_item:
+                self.instrument_item_services.update_instrument_item(instrument_item_id,instrument_item)
+            return jsonify({'message': 'Instrument item updated successfully'})
+        except Exception as e:
+            return jsonify({'error': 'Instrument item can not update'}), 500
+        
+    # indicate function delete instrument item
+    def delete_instrument_item(self, instrument_item_id):
+        try:
+            # get item need to delete
+            instrument_items = self.instrument_item_service.get_instrument_item_by_id(instrument_item_id)
+            if instrument_items:
+                self.instrument_item_services.delete_instrument_item(instrument_item_id)
+                return jsonify({'message': 'Instrument deleted successfully'})
+        except Exception as e: 
+            return jsonify({'error': 'Instrument item can not delete'}), 500
+

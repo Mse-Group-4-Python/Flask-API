@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from sqlalchemy import (
     Column,
     Integer,
@@ -11,7 +13,6 @@ from sqlalchemy.orm import (
     mapped_column,
     relationship, sessionmaker, registry,
 )
-from datetime import datetime
 
 
 class Base(DeclarativeBase):
@@ -69,7 +70,6 @@ class Instrument(Base):
         "InstrumentItem", back_populates="instrument"
     )
     tags = Column(String(255), nullable=False)
-
 
 class InstrumentItem(Base):
     __tablename__ = "instrument_item"

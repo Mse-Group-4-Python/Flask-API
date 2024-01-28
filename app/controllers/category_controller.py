@@ -2,7 +2,6 @@ from flask import jsonify
 
 from app.services.category_service import CategoryService
 
-
 class CategoryController:
     __category_service: CategoryService
 

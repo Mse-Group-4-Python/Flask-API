@@ -1,3 +1,4 @@
+from app.models.instrument_model import InstrumentModel
 from app.repositories.instrument_repository import InstrumentRepository
 
 class InstrumentService:
@@ -5,7 +6,12 @@ class InstrumentService:
         self.instrument_repository = instrument_repository
 
     def get_all_instruments(self):
-        return self.instrument_repository.get_all()
+        return [InstrumentModel(instrument.id,
+                                instrument.instrument_name,
+                                instrument.manufacturer_id,
+                                instrument.category_id,
+                                instrument.description,
+                                instrument.color ) for instrument in  self.instrument_repository.get_all()]
 
     def get_instrument_by_id(self, instrument_id):
         return self.instrument_repository.get_by_id(instrument_id)

@@ -14,7 +14,13 @@ class InstrumentService:
                                 instrument.color ) for instrument in  self.instrument_repository.get_all()]
 
     def get_instrument_by_id(self, instrument_id):
-        return self.instrument_repository.get_by_id(instrument_id)
+        instrument = self.instrument_repository.get_by_id(instrument_id)
+        return InstrumentModel(instrument.id,
+                                instrument.instrument_name,
+                                instrument.manufacturer_id,
+                                instrument.category_id,
+                                instrument.description,
+                                instrument.color) if instrument else None 
 
     def create_instrument(self, instrument):
         self.instrument_repository.create(instrument)

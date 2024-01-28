@@ -177,9 +177,9 @@ def add_instrument():
     instrument_9 = Instrument(id=9, instrument_name="Vibraslap", manufacturer_id=1, category_id=10 ,description="Vibraslap has a characteristic deep, heavy sound, different from other bass drums such as the surdo or kick-drum", color="Wood", tags="Membranophones")
     instrument_10 = Instrument(id=10, instrument_name="Wooden fish", manufacturer_id=2, category_id=1 ,description="A wooden fish, also known as a Chinese temple block, wooden bell, or muyu, is a type of woodblock that originated from East Asia that is used by monks and lay people in the Mahayana tradition of Buddhism.", color="Natural", tags="Idiophones")
     instrument_11 = Instrument(id=11, instrument_name="Bamboula", manufacturer_id=3, category_id=1 ,description="A bamboula is a type of drum made from a rum barrel with skin stretched over one end.It is also a dance accompanied by music from these drums.", color="Brown", tags="Membranophones")
-    instrument_12 = Instrument(id=11, instrument_name="Faia", manufacturer_id=7, category_id=5 ,description="The alfaia is a Brazilian membranophone. It is a wooden drum made of animal skin tensioned or loosened through ropes placed alongside the body of the instrument.", color="Natural trumpets", tags="Membranophones")
-    instrument_13 = Instrument(id=12, instrument_name="Mari", manufacturer_id=7, category_id=2 ,description="The marimba (/mərimbə/) is a musical instrument in the percussion family that consists of wooden bars that are struck by mallets", color="Wood", tags="Aerophones")
-    instrument_14 = Instrument(id=13, instrument_name="Lintang", manufacturer_id=7, category_id=8 ,description="The ashiko is a drum, shaped like a tapered cylinder (or truncated cone) with the head on the wide end, and the narrow end open.", color="Black", tags="Idiophones")
+    instrument_12 = Instrument(id=12, instrument_name="Faia", manufacturer_id=7, category_id=5 ,description="The alfaia is a Brazilian membranophone. It is a wooden drum made of animal skin tensioned or loosened through ropes placed alongside the body of the instrument.", color="Natural trumpets", tags="Membranophones")
+    instrument_13 = Instrument(id=13, instrument_name="Mari", manufacturer_id=7, category_id=2 ,description="The marimba (/mərimbə/) is a musical instrument in the percussion family that consists of wooden bars that are struck by mallets", color="Wood", tags="Aerophones")
+    instrument_14 = Instrument(id=14, instrument_name="Lintang", manufacturer_id=7, category_id=8 ,description="The ashiko is a drum, shaped like a tapered cylinder (or truncated cone) with the head on the wide end, and the narrow end open.", color="Black", tags="Idiophones")
     instrument_15 = Instrument(id=15, instrument_name="Steelpanne", manufacturer_id=7, category_id=7 ,description="The steelpan (also known as a pan, steel drum, and sometimes, collectively with other musicians, as a steelband or steel orchestra) is a musical instrument originating in Trinidad and Tobago. Steelpan musicians are called pannists.", color="Black", tags="Aerophones")
     instrument_16 = Instrument(id=16, instrument_name="Ambourine", manufacturer_id=8, category_id=3 ,description="The tambourine is a musical instrument in the percussion family consisting of a frame, often of wood or plastic, with pairs of small metal jingles, called 'zills'.", color="Red", tags="Idiophones")
     instrument_17 = Instrument(id=17, instrument_name="Fourangle", manufacturer_id=8, category_id=2 ,description="The triangle is a musical instrument in the percussion family, and is classified as an idiophone in the Hornbostel-Sachs classification system. Triangles are made from a variety of metals including aluminum, beryllium copper, brass, bronze, iron, and steel. ", color="Silver", tags="Idiophones")
@@ -188,7 +188,9 @@ def add_instrument():
     instrument_20 = Instrument(id=20, instrument_name="IshWooden", manufacturer_id=11, category_id=1 ,description="A wooden fish, also known as a Chinese temple block, wooden bell, or muyu, is a type of woodblock that originated from East Asia that is used by monks and lay people in the Mahayana tradition of Buddhism.", color="Natural", tags="Idiophones")
     instrument_21 = Instrument(id=21, instrument_name="Bamboohi", manufacturer_id=1, category_id=1 ,description="A bamboula is a type of drum made from a rum barrel with skin stretched over one end.It is also a dance accompanied by music from these drums.", color="Brown", tags="Membranophones")
     
-    db_session.add_all([instrument_1, instrument_2,instrument_3, instrument_4, instrument_5, instrument_6, instrument_7, instrument_8, instrument_9, instrument_10, instrument_11, instrument_12, instrument_13, instrument_14, instrument_15, instrument_16, instrument_17, instrument_18, instrument_19, instrument_20, instrument_21])
+    db_session.add_all([instrument_1, instrument_2,instrument_3, instrument_4, instrument_5, instrument_6, instrument_7,
+                         instrument_8, instrument_9, instrument_10, instrument_11, instrument_12, instrument_13,
+                           instrument_14, instrument_15, instrument_16, instrument_17, instrument_18, instrument_19, instrument_20, instrument_21])
     db_session.commit()
     
 def add_instrucment_item():
@@ -215,7 +217,8 @@ def add_instrucment_item():
     db_session.commit()
 
 def add_customer_order():
-    customer_order_1 = CustomerOrder(id=1, customer_name="Trang", delivery_address="95 Le Van Sy", phone_number="0392391585",order_time= datetime(2012,3,3,10,10,10,10) ,total_price=1)
+    customer_order_1 = CustomerOrder(id=1, customer_name="Trang", delivery_address="95 Le Van Sy",
+                                      phone_number="0392391585",order_time= datetime(2012,3,3,10,10,10,10) ,total_price=1)
     db_session.add_all([customer_order_1])
     db_session.commit()
 

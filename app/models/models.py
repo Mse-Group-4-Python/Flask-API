@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from sqlalchemy import (
     Column,
     Integer,
@@ -11,7 +13,6 @@ from sqlalchemy.orm import (
     mapped_column,
     relationship, sessionmaker, registry,
 )
-from datetime import datetime
 
 
 class Base(DeclarativeBase):
@@ -69,7 +70,6 @@ class Instrument(Base):
         "InstrumentItem", back_populates="instrument"
     )
     tags = Column(String(255), nullable=False)
-
 
 class InstrumentItem(Base):
     __tablename__ = "instrument_item"
@@ -211,7 +211,9 @@ def add_instrucment_item():
     instrument_item_17 = InstrumentItem(id=17, instrument_id=14, serial_number="35.212", description="Okinawa", year_of_purchase=2000 ,price=75200000)
     instrument_item_18 = InstrumentItem(id=18, instrument_id=13, serial_number="134.242.222", description="Mexico", year_of_purchase=2002 ,price=84678000000)
     instrument_item_19 = InstrumentItem(id=19, instrument_id=12, serial_number="46.121.22", description="Portugal", year_of_purchase=2003 ,price=68900000)
-    db_session.add_all([instrument_item_1, instrument_item_2, instrument_item_3, instrument_item_4, instrument_item_5, instrument_item_6, instrument_item_7, instrument_item_8, instrument_item_9, instrument_item_10,instrument_item_11, instrument_item_12, instrument_item_13, instrument_item_14, instrument_item_15, instrument_item_16, instrument_item_17, instrument_item_18, instrument_item_19])
+    db_session.add_all([instrument_item_1, instrument_item_2, instrument_item_3, instrument_item_4, instrument_item_5, instrument_item_6, instrument_item_7, 
+                        instrument_item_8, instrument_item_9, instrument_item_10,instrument_item_11, instrument_item_12, instrument_item_13, instrument_item_14, 
+                        instrument_item_15, instrument_item_16, instrument_item_17, instrument_item_18, instrument_item_19])
     db_session.commit()
 
 def add_customer_order():

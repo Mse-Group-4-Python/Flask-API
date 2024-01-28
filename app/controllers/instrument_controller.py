@@ -1,3 +1,4 @@
+import json
 from flask import jsonify, request
 
 from app.models.models import Instrument
@@ -9,10 +10,14 @@ class InstrumentController:
         self.instrument_service = instrument_service
 
     def get_all_instruments(self):
-        instruments = self.instrument_service.get_all_instruments()
-        instrument_list = [instrument.serialize() for instrument in instruments]
-        return jsonify(instrument_list)
-
+        searchTerm = request.args.get('search')
+        if (searchTerm is None):
+            instruments = self.instrument_service.get_all_instruments()
+            instrument_list = [instrument.serialize() for instrument in instruments]
+            return jsonify(instrument_list)
+        instrument_list =  self.instrument_service.get_instrument_by_search(searchTerm)
+        return jsonify(instrument_list.serialize())
+        
     def get_instrument_by_id(self, instrument_id):
         instrument = self.instrument_service.get_instrument_by_id(instrument_id)
         if instrument:

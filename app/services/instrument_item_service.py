@@ -19,9 +19,10 @@ class InstrumentItemService:
     def create_instrument(self, instrument_item):
         self.instrument_item_repository.create(instrument_item)
 
-    def update_instrument_item(self,instrument_item_id,instrument_item):
-        self.instrument_item_repository.update(instrument_item_id,instrument_item)
+    def update_instrument_item(self, instrument_item_id, instrument_item):
+        print('instrument_item_id', instrument_item_id)
+        print('instrument_item', instrument_item)
+        self.instrument_item_repository.update(instrument_item_id, instrument_item)
 
-    def delete_instrument_item(self,instrument_item_id):
+    def delete_instrument_item(self, instrument_item_id):
         self.instrument_item_repository.delete(instrument_item_id)
-

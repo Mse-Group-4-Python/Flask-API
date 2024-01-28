@@ -23,6 +23,20 @@ class InstrumentModel:
             'category_id' : self.category_id,
             'description' : self.description,
             'color' : self.color,
-            'tags' : self.tags.split(','),
+            'tags' : [tag.strip() for tag in self.tags.split(',')],
             'id': self.id[0]
+        }
+        
+class InstrumentWithSuggestionResponse:
+    instruments: list()
+    suggestion: list()
+    
+    def __init__(self, instruments, suggestion):
+        self.instruments = instruments
+        self.suggestion = suggestion
+    
+    def serialize(self):
+        return {
+            "instruments:" : [instrument.serialize() for instrument in self.instruments],
+            "suggestionKeyword" : self.suggestion
         }

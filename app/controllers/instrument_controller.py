@@ -15,7 +15,8 @@ class InstrumentController:
             instruments = self.instrument_service.get_all_instruments()
             instrument_list = [instrument.serialize() for instrument in instruments]
             return jsonify(instrument_list)
-        self.instrument_service.get_instrument_by_search(searchTerm)
+        instrument_list =  self.instrument_service.get_instrument_by_search(searchTerm)
+        return jsonify(instrument_list.serialize())
         
     def get_instrument_by_id(self, instrument_id):
         instrument = self.instrument_service.get_instrument_by_id(instrument_id)

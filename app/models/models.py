@@ -70,7 +70,6 @@ class Instrument(Base):
     )
     tags = Column(String(255), nullable=False)
 
-
 class InstrumentItem(Base):
     __tablename__ = "instrument_item"
     id = Column(Integer, primary_key=True, autoincrement=True)

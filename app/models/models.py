@@ -165,10 +165,22 @@ def add_manufacturer_data():
                         manufacturer_6,manufacturer_7,manufacturer_8,manufacturer_9,manufacturer_10,manufacturer_11])
     db_session.commit()
 
+def add_instrument():
+    instrument_1 = Instrument(id=1, instrument_name="Lur", manufacturer_id=5, category_id=13 ,description="Aerophones", color="Natural trumpets", tags="Denmark, Norway")
+
+def add_instrucment_item():
+    instrument_item_1 = InstrumentItem(id=1, instrument_id=1, serial_number="423.121.22", description="Bronze snare from Brudevelte bog, Lynge parish.", year_of_purchase=2007 ,price=10000000)
+  
+
+def add_customer_order():
+    customer_order_1 = CustomerOrder(id=1, customer_name="Trang", delivery_address="95 Le Van Sy", phone_number="0392391585",order_time="10:00" ,total_price=1)
+
 
 def seed_all_data():
     add_category_data()
     add_manufacturer_data()
-    
+    add_instrument()
+    add_instrucment_item()
+    add_customer_order()
     with open("initialized.flag", "w") as flag_file:
         flag_file.write("initialized")

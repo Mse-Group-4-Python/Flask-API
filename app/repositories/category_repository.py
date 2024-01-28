@@ -9,7 +9,7 @@ class CategoryRepository:
     def __init__(self, _db_session=None):
         self.__db_session = _db_session or db_session
 
-    def get_all(self):
+    def get_all(self) -> list[Category]:
         return self.__db_session.query(Category).all()
 
     def get_by_id(self, category_id):
@@ -19,7 +19,9 @@ class CategoryRepository:
         return self.__db_session.add(category)
 
     def update(self, category_id, category):
-        return self.__db_session.query(Category).filter_by(id=category_id).update(category)
+        return (
+            self.__db_session.query(Category).filter_by(id=category_id).update(category)
+        )
 
     def delete(self, category_id):
         return self.__db_session.query(Category).filter_by(id=category_id).delete()

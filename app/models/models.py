@@ -177,7 +177,7 @@ def add_instrument():
     instrument_9 = Instrument(id=9, instrument_name="Vibraslap", manufacturer_id=1, category_id=10 ,description="Vibraslap has a characteristic deep, heavy sound, different from other bass drums such as the surdo or kick-drum", color="Wood", tags="Membranophones")
     instrument_10 = Instrument(id=10, instrument_name="Wooden fish", manufacturer_id=2, category_id=1 ,description="A wooden fish, also known as a Chinese temple block, wooden bell, or muyu, is a type of woodblock that originated from East Asia that is used by monks and lay people in the Mahayana tradition of Buddhism.", color="Natural", tags="Idiophones")
     instrument_11 = Instrument(id=11, instrument_name="Bamboula", manufacturer_id=3, category_id=1 ,description="A bamboula is a type of drum made from a rum barrel with skin stretched over one end.It is also a dance accompanied by music from these drums.", color="Brown", tags="Membranophones")
-    instrument_12 = Instrument(id=11, instrument_name="Faia", manufacturer_id=7, category_id=5 ,description="The alfaia is a Brazilian membranophone. It is a wooden drum made of animal skin tensioned or loosened through ropes placed alongside the body of the instrument.", color="Natural trumpets", tags="Membranophones")
+    instrument_12 = Instrument(id=14, instrument_name="Faia", manufacturer_id=7, category_id=5 ,description="The alfaia is a Brazilian membranophone. It is a wooden drum made of animal skin tensioned or loosened through ropes placed alongside the body of the instrument.", color="Natural trumpets", tags="Membranophones")
     instrument_13 = Instrument(id=12, instrument_name="Mari", manufacturer_id=7, category_id=2 ,description="The marimba (/mərimbə/) is a musical instrument in the percussion family that consists of wooden bars that are struck by mallets", color="Wood", tags="Aerophones")
     instrument_14 = Instrument(id=13, instrument_name="Lintang", manufacturer_id=7, category_id=8 ,description="The ashiko is a drum, shaped like a tapered cylinder (or truncated cone) with the head on the wide end, and the narrow end open.", color="Black", tags="Idiophones")
     instrument_15 = Instrument(id=15, instrument_name="Steelpanne", manufacturer_id=7, category_id=7 ,description="The steelpan (also known as a pan, steel drum, and sometimes, collectively with other musicians, as a steelband or steel orchestra) is a musical instrument originating in Trinidad and Tobago. Steelpan musicians are called pannists.", color="Black", tags="Aerophones")
@@ -215,13 +215,33 @@ def add_instrucment_item():
     db_session.commit()
 
 def add_customer_order():
-    customer_order_1 = CustomerOrder(id=1, customer_name="Trang", delivery_address="95 Le Van Sy", phone_number="0392391585",order_time= datetime(2012,3,3,10,10,10,10) ,total_price=1)
-    db_session.add_all([customer_order_1])
+    customer_order_1 = CustomerOrder(id=1, customer_name="Trang", delivery_address="95 Le Van Sy", phone_number="0392391585",order_time= datetime(2012,3,7,10,20,27,6) ,total_price=1235668899)
+    customer_order_2 = CustomerOrder(id=2, customer_name="Kemi", delivery_address="Bui Thi Xa", phone_number="039244585",order_time= datetime(2014,8,3,14,10,29,7) ,total_price=57576885337)
+    customer_order_3 = CustomerOrder(id=3, customer_name="Quang", delivery_address="Truong Sa", phone_number="03945691585",order_time= datetime(2023,10,12,19,10,23,9) ,total_price=2457987899000)
+    customer_order_4 = CustomerOrder(id=4, customer_name="Max", delivery_address="Hoang Sa", phone_number="0392391585",order_time= datetime(2024,12,23,18,10,32,10) ,total_price=5739470000)
+    customer_order_5 = CustomerOrder(id=5, customer_name="Dat", delivery_address="Nguyen Thuong Hien", phone_number="0342391585",order_time= datetime(2020,10,3,7,10,14,9) ,total_price=45690000)
+    customer_order_6 = CustomerOrder(id=6, customer_name="Linh Ng", delivery_address="20 Phu Nhuan", phone_number="0562391585",order_time= datetime(2017,5,3,15,10,8,5) ,total_price=456680000)
+    customer_order_7 = CustomerOrder(id=7, customer_name="Trung", delivery_address="Ho Chi Minh", phone_number="03392391585",order_time= datetime(2012,6,3,17,10,17,4) ,total_price=5723550000)
+    customer_order_8 = CustomerOrder(id=8, customer_name="Pham", delivery_address="Ea street", phone_number="0672391585",order_time= datetime(2012,7,4,18,10,15,6) ,total_price=461450000)
+    customer_order_9 = CustomerOrder(id=9, customer_name="Ngan", delivery_address="Quan 8", phone_number="03672391585",order_time= datetime(2019,3,27,10,20,30,10) ,total_price=563789000)
+    customer_order_10 = CustomerOrder(id=10, customer_name="Ngoc", delivery_address="Cho ban co", phone_number="0232391585",order_time= datetime(2020,3,29,7,10,27,3) ,total_price=56273000)
+    customer_order_11 = CustomerOrder(id=11, customer_name="Minh", delivery_address="Ba Chieu", phone_number="0423391585",order_time= datetime(2009,3,3,10,9,30,5) ,total_price=3556080000)
+    db_session.add_all([customer_order_1,customer_order_2,customer_order_3,customer_order_4,customer_order_5,customer_order_6,customer_order_7,customer_order_8,customer_order_9,customer_order_10,customer_order_11])
     db_session.commit()
 
 def add_order_item():
-    order_item_1 = OrderItem(id=1, instrument_item_id=1, quantity=10, price=1340000, customer_order_id=1)
-    db_session.add_all([order_item_1])
+    order_item_1 = OrderItem(id=1, instrument_item_id=1, quantity=5, price=245780000, customer_order_id=1)
+    order_item_2 = OrderItem(id=2, instrument_item_id=2, quantity=2, price=67860000, customer_order_id=1)
+    order_item_3 = OrderItem(id=3, instrument_item_id=3, quantity=3, price=1340000, customer_order_id=1)
+    order_item_4 = OrderItem(id=4, instrument_item_id=4, quantity=7, price=57900000, customer_order_id=2)
+    order_item_5 = OrderItem(id=5, instrument_item_id=5, quantity=3, price=78990000, customer_order_id=3)
+    order_item_6 = OrderItem(id=6, instrument_item_id=11, quantity=2, price=2567890000, customer_order_id=2)
+    order_item_7 = OrderItem(id=7, instrument_item_id=12, quantity=7, price=7896450000, customer_order_id=4)
+    order_item_8 = OrderItem(id=8, instrument_item_id=10, quantity=5, price=543560000, customer_order_id=4)
+    order_item_9 = OrderItem(id=9, instrument_item_id=8, quantity=4, price=16880000, customer_order_id=3)
+    order_item_10 = OrderItem(id=10, instrument_item_id=7, quantity=2, price=196540000, customer_order_id=2)
+    order_item_11 = OrderItem(id=11, instrument_item_id=6, quantity=1, price=4770000, customer_order_id=1)
+    db_session.add_all([order_item_1,order_item_2,order_item_3,order_item_4,order_item_5,order_item_6,order_item_7,order_item_8,order_item_9,order_item_10,order_item_11])
     db_session.commit()
 
 def seed_all_data():
@@ -230,5 +250,6 @@ def seed_all_data():
     add_instrument()
     add_instrucment_item()
     add_customer_order()
+    add_order_item()
     with open("initialized.flag", "w") as flag_file:
         flag_file.write("initialized")

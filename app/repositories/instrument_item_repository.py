@@ -1,4 +1,4 @@
-from app.models.models import InstrumentItem, db_session
+from app.models.models import Instrument, InstrumentItem, db_session
 
 
 class InstrumentItemRepository:
@@ -17,7 +17,11 @@ class InstrumentItemRepository:
                 )
             if kwargs.get("price"):
                 query = query.filter_by(price=kwargs.get("price"))
-            if kwargs.get("category_id", False) or kwargs.get("manufacturer_id", False):
+            if (
+                kwargs.get("category_id", False)
+                or kwargs.get("manufacturer_id", False)
+                or kwargs.get("tag", False)
+            ):
                 query = query.join(InstrumentItem.instrument)
                 if kwargs.get("category_id"):
                     query = query.filter_by(
@@ -27,6 +31,8 @@ class InstrumentItemRepository:
                     query = query.filter_by(
                         manufacturer_id=kwargs.get("manufacturer_id")
                     )
+                if kwargs.get("tag"):
+                    query = query.filter(Instrument.tags.like(f"%{kwargs.get('tag')}%"))
 
         return query.all()
 

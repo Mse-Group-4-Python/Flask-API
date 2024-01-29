@@ -415,7 +415,7 @@ def add_instrucment_item():
         serial_number="211.211.2",
         description="Cambodia",
         year_of_purchase=2007,
-        price=10000000,
+        price=100000,
     )
     instrument_item_2 = InstrumentItem(
         id=2,
@@ -423,7 +423,7 @@ def add_instrucment_item():
         serial_number="211.311",
         description="China",
         year_of_purchase=2017,
-        price=123000000,
+        price=123000,
     )
     instrument_item_3 = InstrumentItem(
         id=3,
@@ -431,7 +431,7 @@ def add_instrucment_item():
         serial_number="211.221.1",
         description="Greece",
         year_of_purchase=2019,
-        price=34500000,
+        price=345000,
     )
     instrument_item_4 = InstrumentItem(
         id=4,
@@ -439,7 +439,7 @@ def add_instrucment_item():
         serial_number="211.221-7",
         description="Curdo-persiano",
         year_of_purchase=2024,
-        price=8754300000,
+        price=875000,
     )
     instrument_item_5 = InstrumentItem(
         id=5,
@@ -447,7 +447,7 @@ def add_instrucment_item():
         serial_number="211.221-8",
         description="Thailand",
         year_of_purchase=1997,
-        price=9865654500000,
+        price=986000,
     )
     instrument_item_6 = InstrumentItem(
         id=6,
@@ -455,7 +455,7 @@ def add_instrucment_item():
         serial_number="111.24",
         description="India",
         year_of_purchase=1998,
-        price=19750000,
+        price=197000,
     )
     instrument_item_7 = InstrumentItem(
         id=7,
@@ -463,7 +463,7 @@ def add_instrucment_item():
         serial_number="111.212",
         description="Okinawa",
         year_of_purchase=2000,
-        price=75268800000,
+        price=75000,
     )
     instrument_item_8 = InstrumentItem(
         id=8,
@@ -471,7 +471,7 @@ def add_instrucment_item():
         serial_number="111.242.222",
         description="Mexico",
         year_of_purchase=2002,
-        price=84268000000,
+        price=84000,
     )
     instrument_item_9 = InstrumentItem(
         id=9,
@@ -479,7 +479,7 @@ def add_instrucment_item():
         serial_number="423.121.22",
         description="Portugal",
         year_of_purchase=2004,
-        price=468900000,
+        price=468000,
     )
     instrument_item_10 = InstrumentItem(
         id=10,
@@ -487,7 +487,7 @@ def add_instrucment_item():
         serial_number="56.211.2",
         description="Cambodia",
         year_of_purchase=2007,
-        price=47668,
+        price=47600,
     )
     instrument_item_11 = InstrumentItem(
         id=11,
@@ -495,7 +495,7 @@ def add_instrucment_item():
         serial_number="2451.211.2",
         description="Cambodia",
         year_of_purchase=2019,
-        price=886556565,
+        price=886000,
     )
     instrument_item_12 = InstrumentItem(
         id=12,
@@ -503,7 +503,7 @@ def add_instrucment_item():
         serial_number="1341.311",
         description="China",
         year_of_purchase=2017,
-        price=123000000,
+        price=123000,
     )
     instrument_item_13 = InstrumentItem(
         id=13,
@@ -511,7 +511,7 @@ def add_instrucment_item():
         serial_number="451.221.1",
         description="Greece",
         year_of_purchase=2019,
-        price=34500000,
+        price=345000,
     )
     instrument_item_14 = InstrumentItem(
         id=14,
@@ -519,7 +519,7 @@ def add_instrucment_item():
         serial_number="56.221-7",
         description="Curdo-persiano",
         year_of_purchase=2024,
-        price=8754300000,
+        price=87000,
     )
     instrument_item_15 = InstrumentItem(
         id=15,
@@ -527,7 +527,7 @@ def add_instrucment_item():
         serial_number="242.221-8",
         description="Thailand",
         year_of_purchase=1999,
-        price=5654500000,
+        price=500000,
     )
     instrument_item_16 = InstrumentItem(
         id=16,
@@ -535,7 +535,7 @@ def add_instrucment_item():
         serial_number="545.24",
         description="India",
         year_of_purchase=1789,
-        price=19750000,
+        price=190000,
     )
     instrument_item_17 = InstrumentItem(
         id=17,
@@ -543,7 +543,7 @@ def add_instrucment_item():
         serial_number="35.212",
         description="Okinawa",
         year_of_purchase=2000,
-        price=75200000,
+        price=750000,
     )
     instrument_item_18 = InstrumentItem(
         id=18,
@@ -551,7 +551,7 @@ def add_instrucment_item():
         serial_number="134.242.222",
         description="Mexico",
         year_of_purchase=2002,
-        price=84678000000,
+        price=840000,
     )
     instrument_item_19 = InstrumentItem(
         id=19,
@@ -559,7 +559,7 @@ def add_instrucment_item():
         serial_number="46.121.22",
         description="Portugal",
         year_of_purchase=2003,
-        price=68900000,
+        price=68000,
     )
     db_session.add_all(
         [
@@ -594,7 +594,7 @@ def add_customer_order():
         delivery_address="95 Le Van Sy",
         phone_number="0392391585",
         order_time=datetime(2012, 3, 7, 10, 20, 27, 6),
-        total_price=1235668899,
+        total_price=500000,
     )
     customer_order_2 = CustomerOrder(
         id=2,
@@ -602,7 +602,7 @@ def add_customer_order():
         delivery_address="Bui Thi Xa",
         phone_number="039244585",
         order_time=datetime(2014, 8, 3, 14, 10, 29, 7),
-        total_price=57576885337,
+        total_price=6000000,
     )
     customer_order_3 = CustomerOrder(
         id=3,
@@ -610,7 +610,7 @@ def add_customer_order():
         delivery_address="Truong Sa",
         phone_number="03945691585",
         order_time=datetime(2023, 10, 12, 19, 10, 23, 9),
-        total_price=2457987899000,
+        total_price=120000,
     )
     customer_order_4 = CustomerOrder(
         id=4,
@@ -618,7 +618,7 @@ def add_customer_order():
         delivery_address="Hoang Sa",
         phone_number="0392391585",
         order_time=datetime(2024, 12, 23, 18, 10, 32, 10),
-        total_price=5739470000,
+        total_price=320000,
     )
     customer_order_5 = CustomerOrder(
         id=5,
@@ -626,7 +626,7 @@ def add_customer_order():
         delivery_address="Nguyen Thuong Hien",
         phone_number="0342391585",
         order_time=datetime(2020, 10, 3, 7, 10, 14, 9),
-        total_price=45690000,
+        total_price=250000,
     )
     customer_order_6 = CustomerOrder(
         id=6,
@@ -634,7 +634,7 @@ def add_customer_order():
         delivery_address="20 Phu Nhuan",
         phone_number="0562391585",
         order_time=datetime(2017, 5, 3, 15, 10, 8, 5),
-        total_price=456680000,
+        total_price=340000,
     )
     customer_order_7 = CustomerOrder(
         id=7,
@@ -642,7 +642,7 @@ def add_customer_order():
         delivery_address="Ho Chi Minh",
         phone_number="03392391585",
         order_time=datetime(2012, 6, 3, 17, 10, 17, 4),
-        total_price=5723550000,
+        total_price=230000,
     )
     customer_order_8 = CustomerOrder(
         id=8,
@@ -650,7 +650,7 @@ def add_customer_order():
         delivery_address="Ea street",
         phone_number="0672391585",
         order_time=datetime(2012, 7, 4, 18, 10, 15, 6),
-        total_price=461450000,
+        total_price=420000,
     )
     customer_order_9 = CustomerOrder(
         id=9,
@@ -658,7 +658,7 @@ def add_customer_order():
         delivery_address="Quan 8",
         phone_number="03672391585",
         order_time=datetime(2019, 3, 27, 10, 20, 30, 10),
-        total_price=563789000,
+        total_price=199000,
     )
     customer_order_10 = CustomerOrder(
         id=10,
@@ -666,7 +666,7 @@ def add_customer_order():
         delivery_address="Cho ban co",
         phone_number="0232391585",
         order_time=datetime(2020, 3, 29, 7, 10, 27, 3),
-        total_price=56273000,
+        total_price=320000,
     )
     customer_order_11 = CustomerOrder(
         id=11,
@@ -674,7 +674,7 @@ def add_customer_order():
         delivery_address="Ba Chieu",
         phone_number="0423391585",
         order_time=datetime(2009, 3, 3, 10, 9, 30, 5),
-        total_price=3556080000,
+        total_price=980000,
     )
     db_session.add_all(
         [
@@ -696,37 +696,37 @@ def add_customer_order():
 
 def add_order_item():
     order_item_1 = OrderItem(
-        id=1, instrument_item_id=1, quantity=5, price=245780000, customer_order_id=1
+        id=1, instrument_item_id=1, quantity=5, price=230000, customer_order_id=1
     )
     order_item_2 = OrderItem(
-        id=2, instrument_item_id=2, quantity=2, price=67860000, customer_order_id=1
+        id=2, instrument_item_id=2, quantity=2, price=567000, customer_order_id=1
     )
     order_item_3 = OrderItem(
-        id=3, instrument_item_id=3, quantity=3, price=1340000, customer_order_id=1
+        id=3, instrument_item_id=3, quantity=3, price=210000, customer_order_id=1
     )
     order_item_4 = OrderItem(
-        id=4, instrument_item_id=4, quantity=7, price=57900000, customer_order_id=2
+        id=4, instrument_item_id=4, quantity=7, price=120000, customer_order_id=2
     )
     order_item_5 = OrderItem(
-        id=5, instrument_item_id=5, quantity=3, price=78990000, customer_order_id=3
+        id=5, instrument_item_id=5, quantity=3, price=430000, customer_order_id=3
     )
     order_item_6 = OrderItem(
-        id=6, instrument_item_id=11, quantity=2, price=2567890000, customer_order_id=2
+        id=6, instrument_item_id=11, quantity=2, price=1200000, customer_order_id=2
     )
     order_item_7 = OrderItem(
-        id=7, instrument_item_id=12, quantity=7, price=7896450000, customer_order_id=4
+        id=7, instrument_item_id=12, quantity=7, price=230500, customer_order_id=4
     )
     order_item_8 = OrderItem(
-        id=8, instrument_item_id=10, quantity=5, price=543560000, customer_order_id=4
+        id=8, instrument_item_id=10, quantity=5, price=600000, customer_order_id=4
     )
     order_item_9 = OrderItem(
-        id=9, instrument_item_id=8, quantity=4, price=16880000, customer_order_id=3
+        id=9, instrument_item_id=8, quantity=4, price=123000, customer_order_id=3
     )
     order_item_10 = OrderItem(
-        id=10, instrument_item_id=7, quantity=2, price=196540000, customer_order_id=2
+        id=10, instrument_item_id=7, quantity=2, price=420000, customer_order_id=2
     )
     order_item_11 = OrderItem(
-        id=11, instrument_item_id=6, quantity=1, price=4770000, customer_order_id=1
+        id=11, instrument_item_id=6, quantity=1, price=510000, customer_order_id=1
     )
     db_session.add_all(
         [

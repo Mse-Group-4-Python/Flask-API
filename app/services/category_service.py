@@ -1,6 +1,6 @@
 from typing import Optional
 
-from app.models.category_model import CategoryModel, InstrumentItemOfCategory
+from app.models.category_model import CategoryModel
 from app.repositories.category_repository import CategoryRepository
 
 
@@ -15,20 +15,6 @@ class CategoryService:
             CategoryModel(
                 category_id=entity.id,
                 category_name=entity.category_name,
-                instrument_items=[
-                    [
-                        InstrumentItemOfCategory(
-                            instrument.instrument_name,
-                            instrument_item.id,
-                            instrument_item.serial_number,
-                            instrument_item.year_of_purchase,
-                            instrument_item.description,
-                            instrument_item.price,
-                        )
-                        for instrument_item in instrument.instrument_items
-                    ]
-                    for instrument in entity.instruments
-                ],
             )
             for entity in self.__category_repository.get_all()
         ]

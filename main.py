@@ -168,4 +168,4 @@ def is_first_run():
 if __name__ == "__main__":
     if is_first_run():
         seed_all_data()
-    app.run(debug=True, port=8080)
+    app.run(debug=True)

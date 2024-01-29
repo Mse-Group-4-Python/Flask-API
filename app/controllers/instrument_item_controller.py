@@ -9,8 +9,11 @@ class InstrumentItemController:
         self.instrument_item_services = instrument_item_services
 
     def get_all_instrument_item(self):
+        data = request.args
         try:
-            instrument_items = self.instrument_item_services.get_all_instrument_item()
+            instrument_items = self.instrument_item_services.get_all_instrument_item(
+                **data
+            )
             instrument_items_list = [
                 instrument_items.serialize() for instrument_items in instrument_items
             ]

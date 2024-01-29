@@ -17,6 +17,8 @@ class InstrumentItemService:
                 price=entity.price,
                 instrument_name=entity.instrument.instrument_name,
                 color=entity.instrument.color,
+                category_name=entity.instrument.category.category_name,
+                manufacturer_name=entity.instrument.manufacturer.manufacturer_name,
             )
             for entity in self.instrument_item_repository.get_all(**kwargs)
         ]
@@ -28,8 +30,6 @@ class InstrumentItemService:
         self.instrument_item_repository.create(instrument_item)
 
     def update_instrument_item(self, instrument_item_id, instrument_item):
-        print("instrument_item_id", instrument_item_id)
-        print("instrument_item", instrument_item)
         self.instrument_item_repository.update(instrument_item_id, instrument_item)
 
     def delete_instrument_item(self, instrument_item_id):

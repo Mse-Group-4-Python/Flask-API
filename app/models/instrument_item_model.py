@@ -6,6 +6,8 @@ class InstrumentItemModel:
     year_of_purchase: str
     price: float
     instrument_name: str
+    category_name: str
+    manufacturer_name: str
     color: str
 
     def __init__(
@@ -16,8 +18,10 @@ class InstrumentItemModel:
         description: str,
         year_of_purchase: str,
         price: float,
-        instrument_name: str,
         color: str,
+        instrument_name: str,
+        category_name: str,
+        manufacturer_name: str,
     ):
         self.instrument_item_id = instrument_item_id
         self.instrument_id = instrument_id
@@ -25,8 +29,10 @@ class InstrumentItemModel:
         self.description = description
         self.year_of_purchase = year_of_purchase
         self.price = price
-        self.instrument_name = instrument_name
         self.color = color
+        self.instrument_name = instrument_name
+        self.category_name = category_name
+        self.manufacturer_name = manufacturer_name
 
     def serialize(self):
         return {
@@ -36,7 +42,9 @@ class InstrumentItemModel:
             "description": self.description,
             "year_of_purchase": self.year_of_purchase,
             "price": self.price,
-            "instrument_name": self.instrument_name,
             "color": self.color,
+            "instrument_name": self.instrument_name,
+            "category_name": self.category_name,
+            "manufacturer_name": self.manufacturer_name,
         }
         pass

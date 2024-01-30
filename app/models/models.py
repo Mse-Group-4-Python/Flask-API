@@ -194,7 +194,7 @@ def add_instrument():
         id=1,
         instrument_name="Alfaia",
         manufacturer_id=5,
-        category_id=13,
+        category_id=2,
         description="The alfaia is a Brazilian membranophone. It is a wooden drum made of animal skin tensioned or loosened through ropes placed alongside the body of the instrument.",
         color="Natural trumpets",
         tags="Membranophones",
@@ -203,7 +203,7 @@ def add_instrument():
         id=2,
         instrument_name="Marimba",
         manufacturer_id=2,
-        category_id=2,
+        category_id=3,
         description="The marimba (/mərimbə/) is a musical instrument in the percussion family that consists of wooden bars that are struck by mallets",
         color="Wood",
         tags="Aerophones",
@@ -212,7 +212,7 @@ def add_instrument():
         id=3,
         instrument_name="Kulintang",
         manufacturer_id=5,
-        category_id=8,
+        category_id=3,
         description="The ashiko is a drum, shaped like a tapered cylinder (or truncated cone) with the head on the wide end, and the narrow end open.",
         color="Black",
         tags="Idiophones",
@@ -221,7 +221,7 @@ def add_instrument():
         id=4,
         instrument_name="Shekere",
         manufacturer_id=3,
-        category_id=5,
+        category_id=20,
         description="It is made of hardwood and generally has a calfskin hide. Nowadays, goatskin is sometimes used, in imitation of the high sound of the popular djembe drum.",
         color="Natural trumpets",
         tags="Membranophones",
@@ -230,7 +230,7 @@ def add_instrument():
         id=5,
         instrument_name="Steelpan",
         manufacturer_id=5,
-        category_id=6,
+        category_id=4,
         description="The steelpan (also known as a pan, steel drum, and sometimes, collectively with other musicians, as a steelband or steel orchestra) is a musical instrument originating in Trinidad and Tobago. Steelpan musicians are called pannists.",
         color="Black",
         tags="Aerophones",
@@ -239,7 +239,7 @@ def add_instrument():
         id=6,
         instrument_name="Tambourine",
         manufacturer_id=4,
-        category_id=3,
+        category_id=4,
         description="The tambourine is a musical instrument in the percussion family consisting of a frame, often of wood or plastic, with pairs of small metal jingles, called 'zills'.",
         color="Red",
         tags="Idiophones",
@@ -248,7 +248,7 @@ def add_instrument():
         id=7,
         instrument_name="Triangle",
         manufacturer_id=2,
-        category_id=13,
+        category_id=4,
         description="The triangle is a musical instrument in the percussion family, and is classified as an idiophone in the Hornbostel-Sachs classification system. Triangles are made from a variety of metals including aluminum, beryllium copper, brass, bronze, iron, and steel. ",
         color="Silver",
         tags="Idiophones",
@@ -257,7 +257,7 @@ def add_instrument():
         id=8,
         instrument_name="Vibraphone",
         manufacturer_id=6,
-        category_id=4,
+        category_id=3,
         description="Traditionally strapped over the shoulder, alfaias are played with a distinctive technique in which players hold the weak-hand drum stick inverted to get the proper attack on the head. ",
         color="White",
         tags="Idiophones",
@@ -266,7 +266,7 @@ def add_instrument():
         id=9,
         instrument_name="Vibraslap",
         manufacturer_id=1,
-        category_id=10,
+        category_id=4,
         description="Vibraslap has a characteristic deep, heavy sound, different from other bass drums such as the surdo or kick-drum",
         color="Wood",
         tags="Membranophones",
@@ -275,7 +275,7 @@ def add_instrument():
         id=10,
         instrument_name="Wooden fish",
         manufacturer_id=2,
-        category_id=1,
+        category_id=20,
         description="A wooden fish, also known as a Chinese temple block, wooden bell, or muyu, is a type of woodblock that originated from East Asia that is used by monks and lay people in the Mahayana tradition of Buddhism.",
         color="Natural",
         tags="Idiophones",
@@ -284,7 +284,7 @@ def add_instrument():
         id=11,
         instrument_name="Bamboula",
         manufacturer_id=3,
-        category_id=1,
+        category_id=2,
         description="A bamboula is a type of drum made from a rum barrel with skin stretched over one end.It is also a dance accompanied by music from these drums.",
         color="Brown",
         tags="Membranophones",
@@ -293,7 +293,7 @@ def add_instrument():
         id=14,
         instrument_name="Faia",
         manufacturer_id=7,
-        category_id=5,
+        category_id=2,
         description="The alfaia is a Brazilian membranophone. It is a wooden drum made of animal skin tensioned or loosened through ropes placed alongside the body of the instrument.",
         color="Natural trumpets",
         tags="Membranophones",
@@ -302,7 +302,7 @@ def add_instrument():
         id=12,
         instrument_name="Mari",
         manufacturer_id=7,
-        category_id=2,
+        category_id=1,
         description="The marimba (/mərimbə/) is a musical instrument in the percussion family that consists of wooden bars that are struck by mallets",
         color="Wood",
         tags="Aerophones",
@@ -311,7 +311,7 @@ def add_instrument():
         id=13,
         instrument_name="Lintang",
         manufacturer_id=7,
-        category_id=8,
+        category_id=3,
         description="The ashiko is a drum, shaped like a tapered cylinder (or truncated cone) with the head on the wide end, and the narrow end open.",
         color="Black",
         tags="Idiophones",
@@ -320,7 +320,7 @@ def add_instrument():
         id=15,
         instrument_name="Steelpanne",
         manufacturer_id=7,
-        category_id=7,
+        category_id=4,
         description="The steelpan (also known as a pan, steel drum, and sometimes, collectively with other musicians, as a steelband or steel orchestra) is a musical instrument originating in Trinidad and Tobago. Steelpan musicians are called pannists.",
         color="Black",
         tags="Aerophones",
@@ -338,7 +338,7 @@ def add_instrument():
         id=17,
         instrument_name="Fourangle",
         manufacturer_id=8,
-        category_id=2,
+        category_id=4,
         description="The triangle is a musical instrument in the percussion family, and is classified as an idiophone in the Hornbostel-Sachs classification system. Triangles are made from a variety of metals including aluminum, beryllium copper, brass, bronze, iron, and steel. ",
         color="Silver",
         tags="Idiophones",
@@ -365,7 +365,7 @@ def add_instrument():
         id=20,
         instrument_name="IshWooden",
         manufacturer_id=11,
-        category_id=1,
+        category_id=4,
         description="A wooden fish, also known as a Chinese temple block, wooden bell, or muyu, is a type of woodblock that originated from East Asia that is used by monks and lay people in the Mahayana tradition of Buddhism.",
         color="Natural",
         tags="Idiophones",
@@ -374,7 +374,7 @@ def add_instrument():
         id=21,
         instrument_name="Bamboohi",
         manufacturer_id=1,
-        category_id=1,
+        category_id=3,
         description="A bamboula is a type of drum made from a rum barrel with skin stretched over one end.It is also a dance accompanied by music from these drums.",
         color="Brown",
         tags="Membranophones",
@@ -594,7 +594,7 @@ def add_customer_order():
         delivery_address="95 Le Van Sy",
         phone_number="0392391585",
         order_time=datetime(2012, 3, 7, 10, 20, 27, 6),
-        total_price=500000,
+        total_price=1978000,
     )
     customer_order_2 = CustomerOrder(
         id=2,
@@ -602,7 +602,7 @@ def add_customer_order():
         delivery_address="Bui Thi Xa",
         phone_number="039244585",
         order_time=datetime(2014, 8, 3, 14, 10, 29, 7),
-        total_price=6000000,
+        total_price=8047000,
     )
     customer_order_3 = CustomerOrder(
         id=3,
@@ -610,15 +610,15 @@ def add_customer_order():
         delivery_address="Truong Sa",
         phone_number="03945691585",
         order_time=datetime(2023, 10, 12, 19, 10, 23, 9),
-        total_price=120000,
+        total_price=3294000,
     )
     customer_order_4 = CustomerOrder(
         id=4,
         customer_name="Max",
         delivery_address="Hoang Sa",
         phone_number="0392391585",
-        order_time=datetime(2024, 12, 23, 18, 10, 32, 10),
-        total_price=320000,
+        order_time=datetime(2022, 12, 23, 18, 10, 32, 10),
+        total_price=1099000,
     )
     customer_order_5 = CustomerOrder(
         id=5,
@@ -626,7 +626,7 @@ def add_customer_order():
         delivery_address="Nguyen Thuong Hien",
         phone_number="0342391585",
         order_time=datetime(2020, 10, 3, 7, 10, 14, 9),
-        total_price=250000,
+        total_price=204000,
     )
     customer_order_6 = CustomerOrder(
         id=6,
@@ -634,7 +634,7 @@ def add_customer_order():
         delivery_address="20 Phu Nhuan",
         phone_number="0562391585",
         order_time=datetime(2017, 5, 3, 15, 10, 8, 5),
-        total_price=340000,
+        total_price=1725000,
     )
     customer_order_7 = CustomerOrder(
         id=7,
@@ -642,7 +642,7 @@ def add_customer_order():
         delivery_address="Ho Chi Minh",
         phone_number="03392391585",
         order_time=datetime(2012, 6, 3, 17, 10, 17, 4),
-        total_price=230000,
+        total_price=1140000,
     )
     customer_order_8 = CustomerOrder(
         id=8,
@@ -650,7 +650,7 @@ def add_customer_order():
         delivery_address="Ea street",
         phone_number="0672391585",
         order_time=datetime(2012, 7, 4, 18, 10, 15, 6),
-        total_price=420000,
+        total_price=2520000,
     )
     customer_order_9 = CustomerOrder(
         id=9,
@@ -658,7 +658,7 @@ def add_customer_order():
         delivery_address="Quan 8",
         phone_number="03672391585",
         order_time=datetime(2019, 3, 27, 10, 20, 30, 10),
-        total_price=199000,
+        total_price=345000,
     )
     customer_order_10 = CustomerOrder(
         id=10,
@@ -666,7 +666,7 @@ def add_customer_order():
         delivery_address="Cho ban co",
         phone_number="0232391585",
         order_time=datetime(2020, 3, 29, 7, 10, 27, 3),
-        total_price=320000,
+        total_price=174000,
     )
     customer_order_11 = CustomerOrder(
         id=11,
@@ -674,7 +674,7 @@ def add_customer_order():
         delivery_address="Ba Chieu",
         phone_number="0423391585",
         order_time=datetime(2009, 3, 3, 10, 9, 30, 5),
-        total_price=980000,
+        total_price=100000,
     )
     db_session.add_all(
         [
@@ -696,37 +696,66 @@ def add_customer_order():
 
 def add_order_item():
     order_item_1 = OrderItem(
-        id=1, instrument_item_id=1, quantity=5, price=230000, customer_order_id=1
+        id=1, instrument_item_id=1, quantity=5, price=500000, customer_order_id=1
     )
     order_item_2 = OrderItem(
-        id=2, instrument_item_id=2, quantity=2, price=567000, customer_order_id=1
+        id=2, instrument_item_id=2, quantity=2, price=246000, customer_order_id=1
     )
     order_item_3 = OrderItem(
-        id=3, instrument_item_id=3, quantity=3, price=210000, customer_order_id=1
+        id=3, instrument_item_id=3, quantity=3, price=1035000, customer_order_id=1
     )
     order_item_4 = OrderItem(
-        id=4, instrument_item_id=4, quantity=7, price=120000, customer_order_id=2
+        id=4, instrument_item_id=4, quantity=7, price=6125000, customer_order_id=2
     )
     order_item_5 = OrderItem(
-        id=5, instrument_item_id=5, quantity=3, price=430000, customer_order_id=3
+        id=5, instrument_item_id=5, quantity=3, price=2958000, customer_order_id=3
     )
     order_item_6 = OrderItem(
-        id=6, instrument_item_id=11, quantity=2, price=1200000, customer_order_id=2
+        id=6, instrument_item_id=11, quantity=2, price=1772000, customer_order_id=2
     )
     order_item_7 = OrderItem(
-        id=7, instrument_item_id=12, quantity=7, price=230500, customer_order_id=4
+        id=7, instrument_item_id=12, quantity=7, price=861000, customer_order_id=4
     )
     order_item_8 = OrderItem(
-        id=8, instrument_item_id=10, quantity=5, price=600000, customer_order_id=4
+        id=8, instrument_item_id=10, quantity=5, price=238000, customer_order_id=4
     )
     order_item_9 = OrderItem(
-        id=9, instrument_item_id=8, quantity=4, price=123000, customer_order_id=3
+        id=9, instrument_item_id=8, quantity=4, price=336000, customer_order_id=3
     )
     order_item_10 = OrderItem(
-        id=10, instrument_item_id=7, quantity=2, price=420000, customer_order_id=2
+        id=10, instrument_item_id=7, quantity=2, price=150000, customer_order_id=2
     )
     order_item_11 = OrderItem(
-        id=11, instrument_item_id=6, quantity=1, price=510000, customer_order_id=1
+        id=11, instrument_item_id=6, quantity=1, price=197000, customer_order_id=1
+    )
+
+    order_item_12 = OrderItem(
+        id=12, instrument_item_id=19, quantity=3, price=204000, customer_order_id=5
+    )
+
+    order_item_13 = OrderItem(
+        id=13, instrument_item_id=16, quantity=6, price=1140000, customer_order_id=7
+    )
+
+    order_item_14 = OrderItem(
+        id=14, instrument_item_id=13, quantity=5, price=1725000, customer_order_id=6
+    )
+
+    order_item_15 = OrderItem(
+        id=15, instrument_item_id=11, quantity=1, price=886000, customer_order_id=7
+    )
+
+    order_item_16 = OrderItem(
+        id=16, instrument_item_id=18, quantity=3, price=2520000, customer_order_id=8
+    )
+    order_item_17 = OrderItem(
+        id=17, instrument_item_id=13, quantity=1, price=345000, customer_order_id=9
+    )
+    order_item_18 = OrderItem(
+        id=18, instrument_item_id=14, quantity=2, price=174000, customer_order_id=10
+    )
+    order_item_19 = OrderItem(
+        id=19, instrument_item_id=1, quantity=1, price=100000, customer_order_id=11
     )
     db_session.add_all(
         [
@@ -741,6 +770,14 @@ def add_order_item():
             order_item_9,
             order_item_10,
             order_item_11,
+            order_item_12,
+            order_item_13,
+            order_item_14,
+            order_item_15,
+            order_item_16,
+            order_item_17,
+            order_item_18,
+            order_item_19,
         ]
     )
     db_session.commit()
